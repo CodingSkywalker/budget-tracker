@@ -1,0 +1,5 @@
+# Ignore database files
+*.db
+
+# Ignore VS Code settings
+.vscode/

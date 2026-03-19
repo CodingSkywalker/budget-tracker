@@ -1,0 +1,51 @@
+Budget Tracker
+A simple Python script I put together to keep track of daily income and expenses from the command line. It saves all your transactions to a local SQLite database so you don't lose your data when you close the app.
+
+What it does
+Logs transactions: Add your income or expenses along with a custom amount and a short description.
+
+Auto-timestamps: You don't have to enter the date; the script grabs the exact time you add the entry.
+
+Stores data locally: uses SQLite3 to store data in a budget_tracker database.db file on your computer.
+
+No dependencies: It only uses Python's built-in libraries (sqlite3 and datetime), so you don't need to run pip install for anything.
+
+How to use it
+Make sure you have Python 3 installed.
+
+Download or clone budget_tracker.py to your computer.
+
+Open your terminal, navigate to the folder where you saved the file, and run:
+
+Bash
+python budget_tracker.py
+The first time you run it, it will automatically create the database file for you. From there, just follow the on-screen menu:
+
+Plaintext
+Budget Tracker Menu:
+1. Add Transaction
+2. View Transactions
+3. Exit
+Database structure
+If you want to poke around the database yourself, the transactions table is set up like this:
+
+id (Primary Key)
+
+date (Text)
+
+type (Text - usually 'income' or 'expense')
+
+amount (Real number)
+
+description (Text)
+
+To-Do / Future features
+A few things I might add later on:
+
+A frontend to this project.
+
+A function to calculate and print the total current balance.
+
+An option to delete or edit a transaction if you make a typo.
+
+A way to export the database to a CSV file.
